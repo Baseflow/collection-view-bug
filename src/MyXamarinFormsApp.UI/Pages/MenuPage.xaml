@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<core:MvxContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:core="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:MyXamarinFormsApp.Core.ViewModels.Main;assembly=MyXamarinFormsApp.Core"
+    xmlns:views="using:MyXamarinFormsApp.UI.Controls"
+    x:TypeArguments="viewModels:MenuViewModel"
+    x:DataType="viewModels:MenuViewModel"
+    x:Class="MyXamarinFormsApp.UI.Pages.MenuPage"
+    Title="Menu">
+    <ScrollView>
+        <StackLayout Spacing="0">
+            <views:IconButton
+                IconSource="icon_alert_circle"
+                Text="Home"
+                Style="{StaticResource MenuButtonStyle}"
+                mvx:Bi.nd="Command HomeCommand">
+                <views:IconButton.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ToggleClicked"/>
+                </views:IconButton.GestureRecognizers>
+            </views:IconButton>
+            <views:IconButton
+                IconSource="icon_alert_circle"
+                Text="About"
+                Style="{StaticResource MenuButtonStyle}"
+                mvx:Bi.nd="Command AboutCommand">
+                <views:IconButton.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ToggleClicked"/>
+                </views:IconButton.GestureRecognizers>
+            </views:IconButton>
+        </StackLayout>
+    </ScrollView>
+ </core:MvxContentPage>

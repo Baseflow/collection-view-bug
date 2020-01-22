@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataTemplate
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:views="clr-namespace:MyXamarinFormsApp.UI.Controls"
+    x:Class="MyXamarinFormsApp.UI.Templates.AboutTextCellTemplate">
+    <StackLayout>
+        <Label mvx:Bi.nd="Text Label" Style="{StaticResource AboutTextLabelStyle}" />
+        <Label mvx:Bi.nd="Text Value"  Style="{StaticResource AboutTextValueStyle}" LineBreakMode="CharacterWrap" />
+        <views:Divider />
+    </StackLayout>
+</DataTemplate>

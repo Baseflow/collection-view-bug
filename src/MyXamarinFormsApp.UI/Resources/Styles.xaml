@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:res="clr-namespace:MyXamarinFormsApp.UI.Resources"
+    xmlns:views="clr-namespace:MyXamarinFormsApp.UI.Controls"
+    x:Class="MyXamarinFormsApp.UI.Resources.Styles">
+
+    <ResourceDictionary.MergedDictionaries>
+        <res:Colors />
+        <res:Sizes />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style TargetType="Label">
+        <Setter Property="FontSize" Value="{StaticResource MediumFontSize}"/>
+    </Style>
+
+    <Style TargetType="StackLayout">
+        <Setter Property="Spacing" Value="0"/>
+    </Style>
+    
+    <Style TargetType="Grid" x:Key="NavigationBarStyle">
+        <Setter Property="BackgroundColor" Value="{StaticResource Gray800}"/>
+    </Style>
+    
+    <Style TargetType="views:TintedImage" x:Key="NavigationBarIconStyle">
+        <Setter Property="TintColor" Value="{StaticResource White}" />
+        <Setter Property="WidthRequest" Value="{StaticResource NavigationBarIconSize}" />
+        <Setter Property="HeightRequest" Value="{StaticResource NavigationBarIconSize}" />
+    </Style>
+
+    <Style TargetType="views:TintedImage" x:Key="NavigationBarActionIconStyle" BasedOn="{StaticResource NavigationBarIconStyle}">
+        <Setter Property="Margin" Value="{StaticResource NavigationBarPadding}" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="NavigationBarTitleStyle">
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="FontSize" Value="{StaticResource LargeFontSize}" />
+        <Setter Property="TextColor" Value="{StaticResource White}" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="NavigationBarSubtitleStyle" BasedOn="{StaticResource NavigationBarTitleStyle}">
+        <Setter Property="FontAttributes" Value="None" />
+        <Setter Property="FontSize" Value="{StaticResource SmallFontSize}" />
+    </Style>
+
+    <Style TargetType="StackLayout" x:Key="ToolbarItemsStackLayoutStyle">
+        <Setter Property="Spacing" Value="{StaticResource ToolbarItemSpacing}" />
+        <Setter Property="Margin" Value="{StaticResource NavigationBarPadding}" />
+    </Style>
+
+    <Style TargetType="views:IconButton" x:Key="MenuButtonStyle">
+        <Setter Property="BackgroundColor" Value="{StaticResource Gray400}" />
+        <Setter Property="TextColor" Value="{StaticResource White}" />
+        <Setter Property="FontSize" Value="{StaticResource MediumFontSize}" />
+        <Setter Property="Margin" Value="{StaticResource SmallHorizontalXSmallVerticalMarginPadding}" />
+    </Style>
+
+    <Style TargetType="views:Divider">
+        <Setter Property="Color" Value="{StaticResource Gray200}" />
+    </Style>
+
+    <Style TargetType="views:GroupHeaderFrame">
+        <Setter Property="BackgroundColor" Value="{StaticResource Gray200}" />
+        <Setter Property="Padding" Value="{StaticResource GroupHeaderFrameMargin}" />
+        <Setter Property="HasShadow" Value="False" />
+        <Setter Property="CornerRadius" Value="0" />
+    </Style>
+
+    <Style TargetType="Span" x:Key="GroupHeaderLabelStyle">
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="TextColor" Value="{StaticResource Gray500}" />
+    </Style>
+
+    <Style TargetType="Span" x:Key="RequiredStarSpanStyle">
+        <Setter Property="TextColor" Value="Red" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="FontSize" Value="{StaticResource SmallFontSize}" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="AboutTextLabelStyle">
+        <Setter Property="TextColor" Value="{StaticResource Gray500}" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="Margin" Value="{StaticResource SmallLeftTopRightMarginPadding}"/>
+    </Style>
+
+    <Style TargetType="Label" x:Key="AboutTextValueStyle" BasedOn="{StaticResource AboutTextLabelStyle}">
+        <Setter Property="TextColor" Value="{StaticResource Gray800}" />
+        <Setter Property="Margin" Value="{StaticResource SmallLeftBottomRightMarginPadding}"/>
+    </Style>
+    
+    <Style TargetType="Frame" x:Key="AboutButtonLeftFrameStyle">
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="Margin" Value="{StaticResource SmallMarginPadding}" />
+        <Setter Property="CornerRadius" Value="{StaticResource SmallCornerRadius}"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource Gray200}"/>
+        <Setter Property="HasShadow" Value="False"/>
+    </Style>
+    
+    <Style TargetType="views:TintedImage" x:Key="AboutButtonLeftIconStyle">
+        <Setter Property="HeightRequest" Value="{StaticResource XSmallIconSize}"/>
+        <Setter Property="TintColor" Value="{StaticResource Gray800}"/>
+        <Setter Property="Margin" Value="{StaticResource XXXSmallMarginPadding}"/>
+    </Style>
+    
+    <Style TargetType="Label" x:Key="AboutButtonLabelStyle">
+        <Setter Property="Margin" Value="{StaticResource SmallTopRightBottomMarginPadding}"/>
+        <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+        <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="TextColor" Value="{StaticResource Gray800}"/>
+    </Style>
+    
+    <Style TargetType="views:TintedImage" x:Key="AboutButtonRightIconStyle">
+        <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+        <Setter Property="HorizontalOptions" Value="End"/>
+        <Setter Property="Aspect" Value="AspectFit"/>
+        <Setter Property="HeightRequest" Value="{StaticResource MediumIconSize}"/>
+        <Setter Property="TintColor" Value="{StaticResource Gray400}"/>
+        <Setter Property="Margin" Value="{StaticResource SmallMarginPadding}"/>
+    </Style>
+
+</ResourceDictionary>

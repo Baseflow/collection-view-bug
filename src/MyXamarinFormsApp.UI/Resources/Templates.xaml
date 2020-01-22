@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="MyXamarinFormsApp.UI.Resources.Templates"
+                    xmlns:templates="clr-namespace:MyXamarinFormsApp.UI.Templates"
+                    xmlns:templateSelectors="clr-namespace:MyXamarinFormsApp.UI.Templates.Selectors">
+
+    
+    <templateSelectors:AboutPageCellTemplateSelector x:Key="AboutPageCellTemplateSelector">
+        <templateSelectors:AboutPageCellTemplateSelector.ButtonTemplate>
+            <templates:AboutButtonCellTemplate />
+        </templateSelectors:AboutPageCellTemplateSelector.ButtonTemplate>
+        <templateSelectors:AboutPageCellTemplateSelector.TextTemplate>
+            <templates:AboutTextCellTemplate />
+        </templateSelectors:AboutPageCellTemplateSelector.TextTemplate>
+    </templateSelectors:AboutPageCellTemplateSelector>
+</ResourceDictionary>

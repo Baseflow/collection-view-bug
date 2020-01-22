@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<StackLayout
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:MyXamarinFormsApp.UI.Controls"
+    x:Class="MyXamarinFormsApp.UI.Controls.IconLabel"
+    x:Name="root"
+    Orientation="Horizontal">
+    <views:TintedImage
+        x:Name="ImageLeft"
+        VerticalOptions="{Binding IconVerticalOptions, Source={x:Reference root}}"
+        Source="{Binding IconSource, Source={x:Reference root}}"
+        TintColor="{Binding IconColor, Source={x:Reference root}}"
+        WidthRequest="{Binding IconSize, Source={x:Reference root}}"
+        HeightRequest="{Binding IconSize, Source={x:Reference root}}" />
+    <Label
+        x:Name="Label"
+        VerticalTextAlignment="Center"
+        Text="{Binding Text, Source={x:Reference root}}"
+        TextColor="{Binding TextColor, Source={x:Reference root}}"
+        FontFamily="{Binding FontFamily, Source={x:Reference root}}"
+        FontSize="{Binding FontSize, Source={x:Reference root}}" />
+    <views:TintedImage
+        x:Name="ImageRight"
+        VerticalOptions="{Binding IconVerticalOptions, Source={x:Reference root}}"
+        Source="{Binding IconSource, Source={x:Reference root}}"
+        TintColor="{Binding IconColor, Source={x:Reference root}}"
+        WidthRequest="{Binding IconSize, Source={x:Reference root}}"
+        HeightRequest="{Binding IconSize, Source={x:Reference root}}" />
+</StackLayout>

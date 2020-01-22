@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<core:MvxContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:core="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:views="using:MyXamarinFormsApp.UI.Controls"
+    x:Class="MyXamarinFormsApp.UI.Pages.BasePage"
+    x:Name="BasePageReference">
+
+    <Grid
+        x:Name="BasePageGrid" x:FieldModifier="protected"
+        VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+        RowSpacing="0" ColumnSpacing="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid
+            x:Name="NavBarGrid" x:FieldModifier="protected"
+            Grid.ColumnSpan="2"
+            RowSpacing="0" ColumnSpacing="0"
+            Style="{StaticResource NavigationBarStyle}"
+            IsVisible="{Binding Path=ShowNavigation, Source={x:Reference BasePageReference}}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="8" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="8" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" /> <!-- will be calculated in code behind -->
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" /> <!-- will be calculated in code behind -->
+            </Grid.ColumnDefinitions>
+
+            <!-- Button configured in code behind -->
+            <views:TintedImage
+                Grid.RowSpan="4"
+                x:Name="NavBarActionButton" x:FieldModifier="protected"
+                Style="{StaticResource NavigationBarActionIconStyle}"
+                IsVisible="{Binding Path=ShowNavigationActionButton, Source={x:Reference BasePageReference}}"/>
+
+            <Label
+                x:Name="TitleLabel" x:FieldModifier="protected"
+                Grid.Row="1" Grid.RowSpan="2" Grid.Column="1"
+                HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                Style="{StaticResource NavigationBarTitleStyle}"
+                Text="{Binding Path=Title, Source={x:Reference BasePageReference}}" />
+
+            <Label
+                Grid.Row="2" Grid.Column="1"
+                HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                Style="{StaticResource NavigationBarSubtitleStyle}"
+                Text="{Binding Path=Subtitle, Source={x:Reference BasePageReference}}" />
+
+            <StackLayout
+                x:Name="ToolbarItemsContainer" x:FieldModifier="protected"
+                Grid.RowSpan="4" Grid.Column="2"
+                Orientation="Horizontal"
+                Style="{StaticResource ToolbarItemsStackLayoutStyle}">
+                <!-- Will be injected in the code behind -->
+            </StackLayout>
+
+        </Grid>
+
+        <!-- Content & FloatinActionButton injected in code behind -->
+
+    </Grid>
+
+</core:MvxContentPage>

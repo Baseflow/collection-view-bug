@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataTemplate
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:views="clr-namespace:MyXamarinFormsApp.UI.Controls"
+    x:Class="MyXamarinFormsApp.UI.Templates.AboutButtonCellTemplate">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="1"/>
+        </Grid.RowDefinitions>
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer mvx:Bi.nd="Command Command"/>
+        </Grid.GestureRecognizers>
+        
+        <Frame
+            Style="{StaticResource AboutButtonLeftFrameStyle}">
+            <views:TintedImage
+                Style="{StaticResource AboutButtonLeftIconStyle}"
+                mvx:Bi.nd="Source CommandIconSource" />
+        </Frame>
+        <Label
+            Grid.Column="1"
+            Style="{StaticResource AboutButtonLabelStyle}"
+            mvx:Bi.nd="Text CommandText" />
+        <views:TintedImage
+            Grid.Column="2"
+            Source="icon_chevron_right"
+            Style="{StaticResource AboutButtonRightIconStyle}" />
+        <views:Divider
+            Grid.Row="1"
+            Grid.ColumnSpan="3" />
+    </Grid>
+</DataTemplate>

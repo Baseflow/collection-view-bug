@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:BasePage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:MyXamarinFormsApp.UI.Pages"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:MyXamarinFormsApp.Core.ViewModels.About;assembly=MyXamarinFormsApp.Core"
+    xmlns:views="clr-namespace:MyXamarinFormsApp.UI.Controls"
+    x:TypeArguments="viewModels:AboutViewModel"
+    x:Class="MyXamarinFormsApp.UI.Pages.AboutPage"
+    Title="Main page">
+    <pages:BasePage.BasePageContent>
+        <CollectionView
+            IsGrouped="True"
+            mvx:Bi.nd="ItemsSource AboutList"
+            SelectionMode="None"
+            ItemSizingStrategy="MeasureAllItems"
+            ItemTemplate="{StaticResource AboutPageCellTemplateSelector}">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="1" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <views:GroupHeaderFrame mvx:Bi.nd="Text Key" />
+                </DataTemplate>
+            </CollectionView.GroupHeaderTemplate>
+            <!--Temporary Workaround for groupfooter: https://github.com/xamarin/Xamarin.Forms/issues/8228 -->
+            <CollectionView.GroupFooterTemplate>
+                <DataTemplate >
+                    <ContentView />
+                </DataTemplate>
+            </CollectionView.GroupFooterTemplate>
+            <CollectionView.Footer>
+                <StackLayout>
+                    <Button Text="Deactivate" />
+                </StackLayout>                
+            </CollectionView.Footer>
+        </CollectionView>
+    </pages:BasePage.BasePageContent>
+</pages:BasePage>

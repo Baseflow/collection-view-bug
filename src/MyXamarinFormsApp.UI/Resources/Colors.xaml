@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MyXamarinFormsApp.UI.Resources.Colors">
+
+    <Color x:Key="Transparent">#00ffffff</Color>
+    <Color x:Key="White">#ffffff</Color>
+    <Color x:Key="Gray100">#f6f8fa</Color>
+    <Color x:Key="Gray200">#e1e4e8</Color>
+    <Color x:Key="Gray300">#d1d5da</Color>
+    <Color x:Key="Gray400">#959da5</Color>
+    <Color x:Key="Gray500">#6a737d</Color>
+    <Color x:Key="Gray600">#586069</Color>
+    <Color x:Key="Gray700">#444d56</Color>
+    <Color x:Key="Gray800">#2f363d</Color>
+    <Color x:Key="Gray900">#24292e</Color>
+    <Color x:Key="Black">#000000</Color>
+
+</ResourceDictionary>
