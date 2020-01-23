@@ -45,9 +45,9 @@
 
     <Thickness x:Key="SmallTopRightBottomMarginPadding">0,8,8,8</Thickness>
 
-    <Thickness x:Key="SmallLeftTopRightMarginPadding">8,8,8,0</Thickness>
+    <Thickness x:Key="MediumLeftTopRightMarginPadding">16,16,16,0</Thickness>
 
-    <Thickness x:Key="SmallLeftBottomRightMarginPadding">8,0,8,8</Thickness>
+    <Thickness x:Key="MediumLeftRightBottomMarginPadding">16,0,16,16</Thickness>
 
     <Thickness x:Key="GroupHeaderFrameMargin">16,16,16,4</Thickness>
     

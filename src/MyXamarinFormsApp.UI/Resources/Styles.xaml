@@ -81,12 +81,12 @@
     <Style TargetType="Label" x:Key="AboutTextLabelStyle">
         <Setter Property="TextColor" Value="{StaticResource Gray500}" />
         <Setter Property="FontAttributes" Value="Bold" />
-        <Setter Property="Margin" Value="{StaticResource SmallLeftTopRightMarginPadding}"/>
+        <Setter Property="Margin" Value="{StaticResource MediumLeftTopRightMarginPadding}"/>
     </Style>
 
     <Style TargetType="Label" x:Key="AboutTextValueStyle" BasedOn="{StaticResource AboutTextLabelStyle}">
         <Setter Property="TextColor" Value="{StaticResource Gray800}" />
-        <Setter Property="Margin" Value="{StaticResource SmallLeftBottomRightMarginPadding}"/>
+        <Setter Property="Margin" Value="{StaticResource MediumLeftRightBottomMarginPadding}"/>
     </Style>
     
     <Style TargetType="Frame" x:Key="AboutButtonLeftFrameStyle">
